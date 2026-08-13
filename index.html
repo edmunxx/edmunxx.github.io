@@ -1,13 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Edmundo Ferdinandus</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <title>Edmundo Ferdinandus — UI/UX Designer & Web Developer</title>
+  <meta content="Edmundo Ferdinandus is a UI/UX Designer and Computer Science student based in Jakarta, Indonesia. Explore my portfolio, resume, and certifications." name="description">
+  <meta content="UI/UX Designer, Web Developer, Flutter, Figma, Jakarta, Indonesia, Portfolio, Edmundo Ferdinandus, Informatics Engineering" name="keywords">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://edmunxx.github.io/">
+  <meta property="og:title" content="Edmundo Ferdinandus — UI/UX Designer & Web Developer">
+  <meta property="og:description" content="Edmundo Ferdinandus is a UI/UX Designer and Computer Science student based in Jakarta, Indonesia. Explore my portfolio, resume, and certifications.">
+  <meta property="og:image" content="https://edmunxx.github.io/assets/img/hero-bg.webp">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://edmunxx.github.io/">
+  <meta name="twitter:title" content="Edmundo Ferdinandus — UI/UX Designer & Web Developer">
+  <meta name="twitter:description" content="Edmundo Ferdinandus is a UI/UX Designer and Computer Science student based in Jakarta, Indonesia. Explore my portfolio, resume, and certifications.">
+  <meta name="twitter:image" content="https://edmunxx.github.io/assets/img/hero-bg.webp">
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -22,11 +36,39 @@
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Edmundo Ferdinandus",
+    "url": "https://edmunxx.github.io",
+    "image": "https://edmunxx.github.io/assets/img/me.jpeg",
+    "jobTitle": "UI/UX Designer",
+    "description": "UI/UX Designer and Computer Science student based in Jakarta, Indonesia.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Jakarta",
+      "addressCountry": "Indonesia"
+    },
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Esa Unggul University"
+    },
+    "sameAs": [
+      "https://www.facebook.com/edmunxx/",
+      "https://www.instagram.com/edmunxx_/",
+      "https://www.linkedin.com/in/edmunxx",
+      "https://github.com/edmunxx/",
+      "https://medium.com/@edmundo.ferdinandus",
+      "https://dribbble.com/edmunxx"
+    ]
+  }
+  </script>
 
   <!-- =======================================================
   * Template Name: Lonely
@@ -38,10 +80,15 @@
 </head>
 
 <body>
+  <!-- Dark Mode Toggle -->
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+    <i class="bi bi-moon-fill" id="themeIcon"></i>
+  </button>
+
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex flex-column align-items-center justify-content-center">
     <h1>Edmundo Ferdinandus</h1>
-    <h2>Hi, i'm a passionate <u>UI/UX Designer</u> from Jakarta.</h2>
+    <h2>Hi, I'm a passionate <u>UI/UX Designer</u> from Jakarta.</h2>
     <div class="social-links d-flex flex-row align-items-center justify-content-center">
       <a href="https://www.facebook.com/edmunxx/" target="_blank" class="facebook bx-tada-hover" data-toggle="tooltip"
         title="Facebook"><i class="bi bi-facebook"></i></a>
@@ -54,7 +101,7 @@
       <a href="https://medium.com/@edmundo.ferdinandus" target="_blank" class="medium bx-tada-hover"><i
           class="bi bi-medium" data-toggle="tooltip" title="Medium"></i></a>
       <a href="https://dribbble.com/edmunxx" target="_blank" class="dribbble bx-tada-hover"><i class="bi bi-dribbble"
-          data-toggle="tooltip" title="Dribble"></i></a>
+          data-toggle="tooltip" title="Dribbble"></i></a>
       <a href="mailto:edmundo.ferdinandus@gmail.com" target="_blank" class="email bx-tada-hover"><i
           class="bx bx-envelope" data-toggle="tooltip" title="Email Me!"></i></a>
     </div>
@@ -92,7 +139,7 @@
           <div class="col-xl-7 ps-0 ps-lg-5 pe-lg-1 d-flex align-items-stretch">
             <div class="content d-flex flex-column justify-content-center">
               <div class="section-title">
-                <h2>Learn More About Me</h3>
+                <h2>Learn More About Me</h2>
               </div>
               <p>
                 I'm a student at Esa Unggul University, majoring Computer Science or Informatics Engineering. I love to
@@ -404,22 +451,68 @@
                   <a href="https://medium.com/@edmundo.ferdinandus" target="_blank" class="medium bx-tada-hover"><i
                       class="bi bi-medium" data-toggle="tooltip" title="Medium"></i></a>
                   <a href="https://dribbble.com/edmunxx" target="_blank" class="dribbble bx-tada-hover"><i
-                      class="bi bi-dribbble" data-toggle="tooltip" title="Dribble"></i></a>
+                      class="bi bi-dribbble" data-toggle="tooltip" title="Dribbble"></i></a>
                   <a href="mailto:edmundo.ferdinandus@gmail.com" target="_blank" class="email bx-tada-hover"><i
                       class="bx bx-envelope" data-toggle="tooltip" title="Email Me!"></i></a>
                 </div>
               </div>
             </div>
+
+            <!-- Contact Form via Formspree -->
+            <div class="col-lg-6 col-md-6 mt-4 mt-lg-0">
+              <div class="contact-form-card">
+                <h4 class="form-title">Send Me a Message</h4>
+                <form action="https://formspree.io/f/edmundo.ferdinandus@gmail.com" method="POST" id="contactForm"
+                  class="php-email-form">
+                  <div class="row">
+                    <div class="col-md-6 form-group">
+                      <div class="input-wrapper">
+                        <i class="bi bi-person input-icon"></i>
+                        <input type="text" name="name" class="form-control" id="name" placeholder="Your Name"
+                          required>
+                      </div>
+                    </div>
+                    <div class="col-md-6 form-group mt-3 mt-md-0">
+                      <div class="input-wrapper">
+                        <i class="bi bi-envelope input-icon"></i>
+                        <input type="email" name="email" class="form-control" id="email" placeholder="Your Email"
+                          required>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group mt-3">
+                    <div class="input-wrapper">
+                      <i class="bi bi-chat-dots input-icon"></i>
+                      <input type="text" name="subject" class="form-control" id="subject"
+                        placeholder="Subject" required>
+                    </div>
+                  </div>
+                  <div class="form-group mt-3">
+                    <div class="input-wrapper textarea-wrapper">
+                      <i class="bi bi-pencil input-icon"></i>
+                      <textarea class="form-control" name="message" rows="5" placeholder="Your Message"
+                        required></textarea>
+                    </div>
+                  </div>
+                  <div class="text-center mt-4">
+                    <button type="submit" class="btn-send">
+                      <span>Send Message</span>
+                      <i class="bi bi-arrow-right"></i>
+                    </button>
+                  </div>
+                  <div id="formMessage" class="form-message"></div>
+                </form>
+              </div>
+            </div>
+
           </div>
         </div>
         <div id="footer">
-          <div class="copyright">&copy; Copyright <strong><span>Lonely</span></strong>. All Rights Reserved</div>
+          <div class="copyright">&copy; Copyright <strong><span>Edmundo Ferdinandus</span></strong>. All Rights
+            Reserved</div>
           <div class="credits">
-            <!-- All the links in the footer should remain intact. -->
-            <!-- You can delete the links only if you purchased the pro version. -->
-            <!-- Licensing information: https://bootstrapmade.com/license/ -->
-            <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/free-html-bootstrap-template-lonely/ -->
-            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+            Template originally by <a href="https://bootstrapmade.com/">BootstrapMade</a> — customized by
+            Edmundo Ferdinandus
           </div>
         </div>
       </div>
@@ -434,13 +527,82 @@
       class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Theme Toggle JS -->
+  <script>
+    // Dark mode toggle
+    (function () {
+      const html = document.documentElement;
+      const toggle = document.getElementById('themeToggle');
+      const icon = document.getElementById('themeIcon');
+
+      // Load saved theme
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        html.setAttribute('data-theme', 'dark');
+        icon.className = 'bi bi-sun-fill';
+      }
+
+      toggle.addEventListener('click', function () {
+        const current = html.getAttribute('data-theme');
+        if (current === 'light') {
+          html.setAttribute('data-theme', 'dark');
+          icon.className = 'bi bi-sun-fill';
+          localStorage.setItem('theme', 'dark');
+        } else {
+          html.setAttribute('data-theme', 'light');
+          icon.className = 'bi bi-moon-fill';
+          localStorage.setItem('theme', 'light');
+        }
+      });
+
+      // Contact form handling via Formspree
+      const form = document.getElementById('contactForm');
+      if (form) {
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+          const btn = form.querySelector('.btn-send');
+          const msg = document.getElementById('formMessage');
+          const originalHTML = btn.innerHTML;
+          btn.innerHTML = '<span>Sending...</span><i class="bi bi-arrow-repeat spinning"></i>';
+          btn.disabled = true;
+          msg.textContent = '';
+          msg.className = 'form-message';
+
+          fetch(form.action, {
+            method: 'POST',
+            body: new FormData(form),
+            headers: { 'Accept': 'application/json' }
+          }).then(response => {
+            if (response.ok) {
+              btn.innerHTML = '<i class="bi bi-check-circle"></i><span>Sent!</span>';
+              btn.classList.add('btn-sent');
+              msg.textContent = 'Message sent successfully! I\'ll get back to you soon.';
+              msg.className = 'form-message success';
+              form.reset();
+            } else {
+              btn.innerHTML = '<i class="bi bi-exclamation-circle"></i><span>Error</span>';
+              btn.classList.add('btn-error');
+              msg.textContent = 'Something went wrong. Please try again.';
+              msg.className = 'form-message error';
+            }
+          }).catch(() => {
+            btn.innerHTML = '<i class="bi bi-exclamation-circle"></i><span>Error</span>';
+            btn.classList.add('btn-error');
+            msg.textContent = 'Network error. Please check your connection.';
+            msg.className = 'form-message error';
+          }).finally(() => {
+            setTimeout(() => {
+              btn.innerHTML = originalHTML;
+              btn.disabled = false;
+              btn.classList.remove('btn-sent', 'btn-error');
+            }, 4000);
+          });
+        });
+      }
+    })();
+  </script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>

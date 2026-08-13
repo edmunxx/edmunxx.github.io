@@ -1,0 +1,7 @@
+# .gitignore
+
+# Project documentation (local working notes, not for repo)
+base-knowledge.md
+design.md
+recommendation.mdnode_modules/
+package-lock.json

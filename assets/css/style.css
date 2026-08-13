@@ -344,7 +344,9 @@ h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background: url("../img/hero-bg.jpg") top center;
+  background-image: url("../img/hero-bg.webp");
+  background-size: cover;
+  background-blend-mode: multiply;
   background-size: cover;
   background-blend-mode: multiply;
   background-color: rgba(0, 0, 0, 0.5);
@@ -892,6 +894,141 @@ section,
   }
 }
 
+/*--------------------------------------------------------------
+# Contact Form Card
+--------------------------------------------------------------*/
+.contact-form-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 32px 28px;
+  box-shadow: 0 8px 32px rgba(44, 73, 100, 0.10);
+  border: 1px solid rgba(54, 138, 255, 0.08);
+}
+
+.form-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #2c4964;
+  margin-bottom: 24px;
+  font-family: "Poppins", sans-serif;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.input-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #a0b0c4;
+  pointer-events: none;
+  transition: color 0.3s;
+}
+
+.textarea-wrapper .input-icon {
+  top: 18px;
+  transform: none;
+}
+
+.input-wrapper .form-control {
+  padding: 12px 14px 12px 44px;
+  border: 1.5px solid #dde3ea;
+  border-radius: 10px;
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+  background: #f8fafc;
+  color: #2c4964;
+  transition: border-color 0.3s, background 0.3s, box-shadow 0.3s;
+}
+
+.input-wrapper .form-control:focus {
+  border-color: #368aff;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(54, 138, 255, 0.12);
+  outline: none;
+}
+
+.input-wrapper:focus-within .input-icon {
+  color: #368aff;
+}
+
+.btn-send {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 36px;
+  background: linear-gradient(135deg, #368aff 0%, #2678e8 100%);
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px rgba(54, 138, 255, 0.30);
+}
+
+.btn-send:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(54, 138, 255, 0.40);
+  background: linear-gradient(135deg, #4a95ff 0%, #368aff 100%);
+}
+
+.btn-send:disabled {
+  opacity: 0.8;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-send .spinning {
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.btn-sent {
+  background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%) !important;
+  box-shadow: 0 4px 14px rgba(34, 197, 94, 0.30) !important;
+}
+
+.btn-error {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%) !important;
+  box-shadow: 0 4px 14px rgba(239, 68, 68, 0.30) !important;
+}
+
+.form-message {
+  margin-top: 14px;
+  font-size: 13px;
+  text-align: center;
+  min-height: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.form-message.success {
+  color: #16a34a;
+}
+
+.form-message.error {
+  color: #dc2626;
+}
+
+@media (max-width: 768px) {
+  .contact-form-card {
+    padding: 24px 18px;
+  }
+  .input-wrapper .form-control {
+    padding: 10px 12px 10px 40px;
+    font-size: 13px;
+  }
+}
+
 
 
 @keyframes animate-loading {
@@ -921,4 +1058,280 @@ section,
   padding-top: 5px;
   text-align: center;
   font-size: 13px;
+}
+
+/*--------------------------------------------------------------
+# Dark Mode
+--------------------------------------------------------------*/
+[data-theme="dark"] body {
+  background: #0d1520;
+  color: #a8b3d1;
+}
+
+[data-theme="dark"] a {
+  color: #5ea4ff;
+}
+
+[data-theme="dark"] a:hover {
+  color: #8ec2ff;
+}
+
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4,
+[data-theme="dark"] h5,
+[data-theme="dark"] h6 {
+  color: #e2e8f0;
+}
+
+[data-theme="dark"] #header {
+  background: #1a2332;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] #header .logo h1 a,
+[data-theme="dark"] #header .logo h1 a:hover {
+  color: #e2e8f0;
+}
+
+[data-theme="dark"] .navbar a,
+[data-theme="dark"] .navbar a:focus {
+  color: #a8b3d1;
+}
+
+[data-theme="dark"] .navbar a:hover,
+[data-theme="dark"] .navbar .active,
+[data-theme="dark"] .navbar .active:focus,
+[data-theme="dark"] .navbar li:hover>a {
+  color: #5ea4ff;
+}
+
+[data-theme="dark"] .navbar .dropdown ul {
+  background: #1a2332;
+}
+
+[data-theme="dark"] .navbar .dropdown ul a:hover,
+[data-theme="dark"] .navbar .dropdown ul .active:hover,
+[data-theme="dark"] .navbar .dropdown ul li:hover>a {
+  color: #5ea4ff;
+}
+
+[data-theme="dark"] .navbar-mobile {
+  background: rgba(13, 21, 32, 0.9);
+}
+
+[data-theme="dark"] .navbar-mobile ul {
+  background-color: #1a2332;
+}
+
+[data-theme="dark"] .navbar-mobile a,
+[data-theme="dark"] .navbar-mobile a:focus {
+  color: #a8b3d1;
+}
+
+[data-theme="dark"] .navbar-mobile a:hover,
+[data-theme="dark"] .navbar-mobile .active,
+[data-theme="dark"] .navbar-mobile li:hover>a {
+  color: #5ea4ff;
+}
+
+[data-theme="dark"] .interests .icon-box,
+[data-theme="dark"] .services .icon-box {
+  background: #1a2332;
+  box-shadow: 0 0 29px 0 rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .interests .icon-box:hover::before,
+[data-theme="dark"] .services .icon-box:hover::before {
+  background: #368aff;
+}
+
+[data-theme="dark"] .interests .icon-box h3,
+[data-theme="dark"] .services .icon-box .title {
+  color: #e2e8f0;
+}
+
+[data-theme="dark"] .section-title h2 {
+  color: #e2e8f0;
+}
+
+[data-theme="dark"] .about .content h3 {
+  color: #e2e8f0;
+}
+
+[data-theme="dark"] .about .content .count-box span {
+  color: #e2e8f0;
+}
+
+[data-theme="dark"] .about .content .count-box p {
+  color: #8a9bb5;
+}
+
+[data-theme="dark"] .resume .resume-title {
+  color: #8ab4f8;
+}
+
+[data-theme="dark"] .resume .resume-item h4 {
+  color: #e2e8f0;
+}
+
+[data-theme="dark"] .resume .resume-item h5 {
+  background: #1e2d3d;
+  color: #a8b3d1;
+}
+
+[data-theme="dark"] .resume .resume-item::before {
+  background: #1a2332;
+  border-color: #5ea4ff;
+}
+
+[data-theme="dark"] .contact .contact-about h3 {
+  color: #5ea4ff;
+}
+
+[data-theme="dark"] .contact .contact-about p {
+  color: #8a9bb5;
+}
+
+[data-theme="dark"] .contact .social-links a {
+  background: #1a2332;
+  color: #5ea4ff;
+  border-color: #5ea4ff;
+}
+
+[data-theme="dark"] .contact .social-links a:hover {
+  background: #5ea4ff;
+  color: #0d1520;
+}
+
+[data-theme="dark"] #footer {
+  background: #1a2332;
+  color: #a8b3d1;
+}
+
+[data-theme="dark"] #footer .credits a {
+  color: #5ea4ff;
+}
+
+[data-theme="dark"] .back-to-top {
+  background: #368aff;
+}
+
+[data-theme="dark"] .back-to-top:hover {
+  background: #5ea4ff;
+}
+
+[data-theme="dark"] #hero {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+[data-theme="dark"] .theme-toggle {
+  background: #1a2332;
+  border: 1px solid #2a3a50;
+  color: #a8b3d1;
+}
+
+[data-theme="dark"] .theme-toggle:hover {
+  background: #2a3a50;
+  color: #e2e8f0;
+}
+
+/* Contact form card dark mode */
+[data-theme="dark"] .contact-form-card {
+  background: #1a2332;
+  border-color: rgba(94, 164, 255, 0.15);
+}
+
+[data-theme="dark"] .form-title {
+  color: #e2e8f0;
+}
+
+[data-theme="dark"] .input-wrapper .form-control {
+  background: #1e2d3d;
+  border-color: #2a3a50;
+  color: #e2e8f0;
+}
+
+[data-theme="dark"] .input-wrapper .form-control:focus {
+  border-color: #5ea4ff;
+  background: #1a2332;
+  box-shadow: 0 0 0 3px rgba(94, 164, 255, 0.15);
+}
+
+[data-theme="dark"] .input-wrapper .input-icon {
+  color: #6b7f99;
+}
+
+[data-theme="dark"] .input-wrapper:focus-within .input-icon {
+  color: #5ea4ff;
+}
+
+[data-theme="dark"] .input-wrapper .form-control::placeholder {
+  color: #6b7f99;
+}
+
+[data-theme="dark"] .btn-send {
+  background: linear-gradient(135deg, #5ea4ff 0%, #368aff 100%);
+  box-shadow: 0 4px 14px rgba(94, 164, 255, 0.25);
+}
+
+[data-theme="dark"] .btn-send:hover {
+  background: linear-gradient(135deg, #7ab5ff 0%, #5ea4ff 100%);
+  box-shadow: 0 6px 20px rgba(94, 164, 255, 0.35);
+}
+
+[data-theme="dark"] .form-message.success {
+  color: #4ade80;
+}
+
+[data-theme="dark"] .form-message.error {
+  color: #f87171;
+}
+
+/* Section background dark mode */
+[data-theme="dark"] .section-bg {
+  background: linear-gradient(180deg, #0d1520 0%, #1a2332 100%);
+}
+
+/* Smooth theme transition */
+[data-theme="dark"] body,
+[data-theme="dark"] #header,
+[data-theme="dark"] .interests .icon-box,
+[data-theme="dark"] .services .icon-box,
+[data-theme="dark"] #footer,
+[data-theme="dark"] .contact-form-card,
+[data-theme="dark"] .input-wrapper .form-control,
+[data-theme="dark"] .input-wrapper .input-icon {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/*--------------------------------------------------------------
+# Theme Toggle Button
+--------------------------------------------------------------*/
+.theme-toggle {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  z-index: 9999;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid #dde3ea;
+  background: #fff;
+  color: #2c4964;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.theme-toggle:hover {
+  background: #368aff;
+  color: #fff;
+  border-color: #368aff;
+  transform: rotate(15deg);
 }
